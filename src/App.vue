@@ -22,7 +22,7 @@ export default {
   },
   methods: {
     deleteTodo(id) {
-      console.log(id);
+      this.todos = this.todos.filter(todo => todo.id !== id);
     }
   }
 };
