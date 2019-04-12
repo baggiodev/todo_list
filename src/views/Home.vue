@@ -25,7 +25,8 @@ export default {
     deleteTodo(id) {
       axios
         .delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
-        .then(res => (this.todos = this.todos.filter(todo => todo.id !== id)))
+        .then(() => (this.todos = this.todos.filter(todo => todo.id !== id)))
+        // eslint-disable-next-line
         .catch(err => console.log(err));
     },
     pushTodo(newTodo) {
@@ -36,6 +37,7 @@ export default {
           completed
         })
         .then(res => (this.todos = [...this.todos, res.data]))
+        // eslint-disable-next-line
         .catch(err => console.log(err));
     }
   },
@@ -43,6 +45,7 @@ export default {
     axios
       .get("https://jsonplaceholder.typicode.com/todos?_limit=10")
       .then(res => (this.todos = res.data))
+      // eslint-disable-next-line
       .catch(err => console.log(err));
   }
 };
