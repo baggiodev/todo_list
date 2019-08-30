@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Header/>
-    <router-view/>
+    <Header />
+    <router-view />
   </div>
 </template>
 
@@ -35,5 +35,9 @@ body {
 }
 .btn:hover {
   background: #666;
+}
+#app {
+  background: #42b883;
+  height: 100vh;
 }
 </style>
